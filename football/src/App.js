@@ -1,8 +1,51 @@
 import './App.css';
-import { useState, useEffect } from 'react';
-import AddTeam from './components/Form/AddTeam';
-import UpdateTeam from './components/Form/UpdateTeam';
+import { useState, useEffect, useCallback } from 'react';
+import AddButton from './components/Button/AddButton';
 import TeamTable from './components/Table/TeamTable';
+
+function App() {
+  const [teams, setTeams] = useState([])
+  const fetchTeamsHandler = useCallback(async () => {
+    const response = await fetch('http://localhost:5000/teams');
+    if (!response.ok) {
+      throw new Error('Something went wrong!');
+    }
+
+    const data = await response.json();
+
+    const loadedTeams = [];
+
+    for (let i = 0; i < data.length; i++) {
+      loadedTeams.push({
+        id: data[i].id,
+        name: data[i].name,
+        shortName: data[i].shortName,
+        abbr:data[i].abbr,
+        logo: data[i].logo
+      });
+    }
+    setTeams(loadedTeams);
+  },[]);
+
+    useEffect(() => {
+      fetchTeamsHandler();
+    }, []);
+
+  return (
+    <>
+    <AddButton/>
+    <TeamTable teams = {teams}/>
+    </>
+    //  <AddTeam></AddTeam>
+  );
+}
+
+export default App;
+
+
+
+
+
 //   const data = [
 //     {
 //       id:1,
@@ -33,19 +76,3 @@ import TeamTable from './components/Table/TeamTable';
 //       logo: 'https://resources.premierleague.com/premierleague/badges/rb/t94.svg '
 //     }
 // ]
-
-function App() {
-  const [teams, setTeams] = useState([])
-  
-  useEffect(()=>{
-    fetch('http://localhost:5000/teams')
-      .then(response => response.json())
-      .then(teams => setTeams(teams))
-  },[])
-  return (
-  //  <AddTeam></AddTeam>
-  <TeamTable teams = {teams}></TeamTable>
-  );
-}
-
-export default App;
