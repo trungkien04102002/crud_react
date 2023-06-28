@@ -1,7 +1,6 @@
 import UpdateButton from "../Button/UpdateButton" 
 import DeleteButton from "../Button/DeleteButton"
-import { deleteTeam} from "../../apis/teamApi"
-export default function TeamTable({teams}){ 
+export default function TeamTable({teams, handleDelete}){ 
     return(
         <div class="overflow-x-auto">
         <div class="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
@@ -33,7 +32,7 @@ export default function TeamTable({teams}){
                             <td className="py-3 px-6 text-center">
                             <div className="flex justify-center">
                                 <UpdateButton />
-                                <DeleteButton handleDeleteClick={(id) => deleteTeam(team.id)} />
+                                <DeleteButton handleDelete={(id ) => handleDelete(team.id)}/>
                             </div>
                              </td>
                         </tr>

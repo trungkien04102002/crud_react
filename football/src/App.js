@@ -2,39 +2,30 @@ import './App.css';
 import { useState, useEffect, useCallback } from 'react';
 import AddButton from './components/Button/AddButton';
 import TeamTable from './components/Table/TeamTable';
-
+import { deleteTeam } from './apis/teamApi';
+import axios from 'axios';
 function App() {
+
   const [teams, setTeams] = useState([])
-  const fetchTeamsHandler = useCallback(async () => {
-    const response = await fetch('http://localhost:5000/teams');
-    if (!response.ok) {
-      throw new Error('Something went wrong!');
-    }
 
-    const data = await response.json();
+  const handleDelete = async (id) =>{
+    await deleteTeam(id);
+    setTeams(teams.filter((team) => team.id !== id));
+    } 
 
-    const loadedTeams = [];
-
-    for (let i = 0; i < data.length; i++) {
-      loadedTeams.push({
-        id: data[i].id,
-        name: data[i].name,
-        shortName: data[i].shortName,
-        abbr:data[i].abbr,
-        logo: data[i].logo
+  useEffect(() => {
+    axios.get("http://localhost:5000/teams")
+      .then(response => {
+        setTeams(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching teams:", error);
       });
-    }
-    setTeams(loadedTeams);
-  },[]);
-
-    useEffect(() => {
-      fetchTeamsHandler();
-    }, []);
-
+  }, []);
   return (
     <>
     <AddButton/>
-    <TeamTable teams = {teams}/>
+    <TeamTable teams = {teams} handleDelete = {handleDelete}/>
     </>
     //  <AddTeam></AddTeam>
   );
@@ -76,3 +67,5 @@ export default App;
 //       logo: 'https://resources.premierleague.com/premierleague/badges/rb/t94.svg '
 //     }
 // ]
+
+// setTeamData(teamData.filter((record) => record.id !== id));
