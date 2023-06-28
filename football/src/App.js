@@ -1,66 +1,16 @@
-import './App.css';
-import { useState, useEffect, useCallback } from 'react';
-import AddButton from './components/Button/AddButton';
-import TeamTable from './components/Table/TeamTable';
+import Home from './components/Pages/Home/Home';
 import AddTeam from './components/Pages/NewTeam/AddTeam';
-import { deleteTeam, createTeam, updateTeam } from './apis/teamApi';
-import axios from 'axios';
+// import {Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
-
-  const [teams, setTeams] = useState([])
-  
-  const handleDelete = async (id) =>{
-    await deleteTeam(id);
-    await resetData();
-    } 
-
-  const handleCreate = async (event) =>{
-    event.preventDefault();
-    const newTeam = {
-      name: event.target.elements.name.value || "new name",
-      shortName: event.target.elements.shortName.value || "new short name",
-      abbr: event.target.elements.abbr.value || "new abbr",
-      logo: event.target.elements.logo.value || "new logo",
-    };
-    await createTeam(newTeam)
-    await resetData();
-  }
-
-  const handleSubmitUpdate = async (event) =>{
-    event.preventDefault();
-    const id = event.target.elements.id.value
-    const newTeam = {
-      name: event.target.elements.name.value ,
-      shortName: event.target.elements.shortName.value ,
-      abbr: event.target.elements.abbr.value,
-      logo: event.target.elements.logo.value,
-    };
-    await updateTeam(id, newTeam)
-    await resetData();
-  }
-
-  const fetchData = async () => {
-    const response = await axios.get("http://localhost:5000/teams");
-    setTeams(response.data);
-  };
-  
-  const resetData = async () => {
-    const response = await axios.get("http://localhost:5000/teams");
-    setTeams(response.data);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-  
   return (
-    <>
-    <AddButton/>
-    <AddTeam handleCreate ={handleCreate}/>
-    <TeamTable teams = {teams} handleDelete = {handleDelete} handleSubmitUpdate = {handleSubmitUpdate} />
-    </>
-
-  );
+  <>
+  <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="/Team" element={<AddTeam/>}/>
+  </Routes>
+  </>
+  )
 }
 
 

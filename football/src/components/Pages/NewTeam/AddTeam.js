@@ -1,7 +1,22 @@
 import { useState } from "react";
+import { useLocation } from 'react-router-dom'
+import { createTeam } from "../../../apis/teamApi";
+import { useNavigate } from 'react-router-dom' 
 <script src="https://cdn.tailwindcss.com"></script>
 
-export default function AddTeam({handleCreate}){
+export default function AddTeam(){
+    const navigate = useNavigate()
+    const handleCreate = async (event) =>{
+        event.preventDefault();
+        const newTeam = {
+          name: event.target.elements.name.value || "new name",
+          shortName: event.target.elements.shortName.value || "new short name",
+          abbr: event.target.elements.abbr.value || "new abbr",
+          logo: event.target.elements.logo.value || "new logo",
+        };
+        await createTeam(newTeam)
+        navigate('/')
+      }
     return(
         <div class="container mx-auto py-8">
             <h1 class="text-2xl font-bold mb-6 text-center">CREATE A NEW TEAM!</h1>
