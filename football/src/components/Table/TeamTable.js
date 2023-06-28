@@ -1,6 +1,18 @@
+import { useState } from "react";
 import UpdateButton from "../Button/UpdateButton" 
 import DeleteButton from "../Button/DeleteButton"
-export default function TeamTable({teams, handleDelete}){ 
+import UpdateTeam from "../Team/UpdateTeam";
+export default function TeamTable({teams, handleDelete, handleSubmitUpdate}){ 
+    const [editingTeam, setEditingTeam] = useState(null);
+
+    const handleUpdate = (team) => {
+        setEditingTeam(team);
+
+    };
+  
+    const handleSave = async () => {
+      setEditingTeam(null);
+    };
     return(
         <div class="overflow-x-auto">
         <div class="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
@@ -31,8 +43,8 @@ export default function TeamTable({teams, handleDelete}){
                             </td>
                             <td className="py-3 px-6 text-center">
                             <div className="flex justify-center">
-                                <UpdateButton />
-                                <DeleteButton handleDelete={(id ) => handleDelete(team.id)}/>
+                                <UpdateButton handleUpdate = {handleUpdate} team = {team}/>
+                                <DeleteButton handleDelete={(id) => handleDelete(team.id)}/>
                             </div>
                              </td>
                         </tr>
@@ -42,8 +54,15 @@ export default function TeamTable({teams, handleDelete}){
                 </div>
             </div>
         </div>
+        {editingTeam && (
+        < UpdateTeam
+          team={editingTeam}
+          handleSubmitUpdate = {handleSubmitUpdate}
+          handleSave={handleSave}
+          handleCancel={() => setEditingTeam(null)}
+        />
+      )}
     </div>
     )
 }
-
 
