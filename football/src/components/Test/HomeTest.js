@@ -1,11 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
-import AddButton from '../../Button/AddButton';
-import TeamTable from '../../Table/TeamTable';
-import { deleteTeam, createTeam, updateTeam } from '../../../apis/teamApi';
+import AddButton from '../Button/AddButton';
+import TeamTableTest from './TeamTableTest';
+import { deleteTeam, createTeam, updateTeam } from '../../apis/teamApi';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom' 
+import PaginationTest from './PaginationTest';
 // import Example from '../../Pagination/Pagination';
-export default function Home() {
+export default function HomeTest() {
 
   const [teams, setTeams] = useState([])
   const navigate = useNavigate()
@@ -13,7 +14,6 @@ export default function Home() {
     await deleteTeam(id);
     await resetData();
     } 
-
 
   const handleSubmitUpdate = async (event) =>{
     event.preventDefault();
@@ -49,7 +49,7 @@ export default function Home() {
     </Routes> */}
     <AddButton/>
     {/* <AddTeam handleCreate ={handleCreate}/> */}
-    <TeamTable teams = {teams} handleDelete = {handleDelete} handleSubmitUpdate = {handleSubmitUpdate} />
+    <TeamTableTest teams = {teams} handleDelete = {handleDelete} handleSubmitUpdate = {handleSubmitUpdate} />
     </>
 
   );

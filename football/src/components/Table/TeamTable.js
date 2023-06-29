@@ -2,6 +2,7 @@ import { useState } from "react";
 import UpdateButton from "../Button/UpdateButton" 
 import DeleteButton from "../Button/DeleteButton"
 import UpdateTeam from "../Team/UpdateTeam";
+// import Items from "../Pagination/Pagination";
 export default function TeamTable({teams, handleDelete, handleSubmitUpdate}){ 
     const [editingTeam, setEditingTeam] = useState(null);
 
@@ -65,4 +66,5 @@ export default function TeamTable({teams, handleDelete, handleSubmitUpdate}){
     </div>
     )
 }
+
 

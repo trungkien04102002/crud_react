@@ -1,11 +1,13 @@
 import Home from './components/Pages/Home/Home';
 import AddTeam from './components/Pages/NewTeam/AddTeam';
 // import {Routes, Route} from 'react-router-dom';
+import HomeTest from './components/Test/HomeTest';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
   <>
   <Routes>
+    <Route path="/Test" element={<HomeTest/>}/>
     <Route path="/" element={<Home/>}/>
     <Route path="/Team" element={<AddTeam/>}/>
   </Routes>

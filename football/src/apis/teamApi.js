@@ -41,4 +41,3 @@ export const updateTeam = async (id, formValue) => {
         return error.response.data;
     }
 }
-
