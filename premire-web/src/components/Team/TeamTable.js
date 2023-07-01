@@ -3,7 +3,6 @@ import VisitButton from "../Button/VisitButton";
 import axios from "axios";
 
 export default function TeamTable({teams}) {
-    console.log('kkkk',teams)
 //   const [teams, setTeams] = useState([]);
 //   useEffect(() => {
 //     async function fetchTeam() {
@@ -54,7 +53,7 @@ export default function TeamTable({teams}) {
               </thead>
               <tbody>
                 {teams?.map((team) => (
-                  <tr>
+                  <tr key = {team.id}>
                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
                       <div class="flex items-center">
                         <div class="flex-shrink-0 w-10 h-10 hidden sm:table-cell">
@@ -84,7 +83,7 @@ export default function TeamTable({teams}) {
                       <div class="flex items-center float-right">
                         <div class="mr-3">
                           <p class="text-gray-900 whitespace-no-wrap text-right">
-                            <VisitButton />
+                            <VisitButton teamId = {team.id}/>
                           </p>
                         </div>
                       </div>

@@ -7,7 +7,7 @@ export default function ClubsPage(){
     return(
         <>
         <Header/>
-        <PageHeader/>
+        <PageHeader headerPage={"CLUB PAGE"} />
         <Team/>
         <Footer/>
         </>

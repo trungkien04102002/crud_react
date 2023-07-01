@@ -1,5 +1,5 @@
-import Match from "./Match";
-export default function MatchDay({ dataMatch, isResult }) {
+import MatchTest from "./MatchTest";
+export default function MatchDayTest({ dataMatch, isResult }) {
   return (
     <>
       {dataMatch?.map((data) => (
@@ -20,7 +20,7 @@ export default function MatchDay({ dataMatch, isResult }) {
         </div>
         <div>
           {  data.matches?.map((match) => (
-            <Match matchProps={match} isResult = {isResult} />
+            <MatchTest matchProps={match} isResult = {isResult} />
           ))}
         </div>
       </div>}</>
