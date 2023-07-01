@@ -6,7 +6,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import MatchDay from "../MatchDay/MatchDay";
-export default function GameweekFilter() {
+export default function GameweekFilter({isResult}) {
   const arr = Array.from({ length: 38 }, (_, i) => i + 1);
   const [gameweek, setGameweek] = useState('');
   const [dataMatch, setDataMatch] = useState([]);
@@ -57,6 +57,6 @@ export default function GameweekFilter() {
         </Select>
       </FormControl>
     </div>
-    <MatchDay dataMatch = {dataMatch}/></>
+    <MatchDay dataMatch = {dataMatch} isResult = {isResult}/></>
   );
 }
