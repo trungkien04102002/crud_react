@@ -4,7 +4,7 @@ export default function Header(){
         <header>
         <nav class="bg-[#37003c] border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-[#37003c]">
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                <a href="#" class="flex items-center">
+                <a href="/#" class="flex items-center">
                     <img src="https://www.premierleague.com/resources/rebrand/v7.124.0/i/elements/pl-main-logo.png" class="mr-3 h-6 sm:h-9" alt="Premiere League Logo" />
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Premiere League</span>
                 </a>
@@ -18,24 +18,24 @@ export default function Header(){
                 <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Home</a>
+                            <a href="/#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Fixtures</a>
+                            <a href="/#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Fixtures</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Results</a>
+                            <a href="/#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Results</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Tables</a>
+                            <a href="/#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Tables</a>
                         </li>                        <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Clubs</a>
+                            <a href="/#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Clubs</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Home</a>
+                            <a href="/#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Contact</a>
+                            <a href="/#" class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent  lg:p-0 dark:text-white" aria-current="page">Contact</a>
                         </li>
                     </ul>
                 </div>

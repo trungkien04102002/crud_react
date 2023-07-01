@@ -8,30 +8,30 @@ export default function Footer(){
                     <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
                         <div class="flex flex-col">
                             <span class="font-bold text-white text-[30px] mb-2">Premier League</span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Home</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Fixtures</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Results</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Tables</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Home</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Fixtures</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Results</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Tables</a></span>
 
                         </div>
                         <div class="flex flex-col">
                             <span class="font-bold text-white text-[30px] mt-4 md:mt-0 mb-2">Football & Community</span>
-                            <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500">Wider Football</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">PL Charitable Fund</a></span>
-                            <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500">Community</a></span>
-                            <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500">Mental Health</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Rainbow Laces</a></span>
-                            <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500">Poppy</a></span>
+                            <span class="my-2"><a href="/#" class="text-white text-md hover:text-blue-500">Wider Football</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">PL Charitable Fund</a></span>
+                            <span class="my-2"><a href="/#" class="text-white text-md hover:text-blue-500">Community</a></span>
+                            <span class="my-2"><a href="/#" class="text-white text-md hover:text-blue-500">Mental Health</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Rainbow Laces</a></span>
+                            <span class="my-2"><a href="/#" class="text-white text-md hover:text-blue-500">Poppy</a></span>
                         </div>
                         <div class="flex flex-col">
                             <span class="font-bold text-white text-[30px] mt-4 md:mt-0 mb-2">About</span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Overview</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">What we do</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Statement of Principles</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Inclusion</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Publications</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Partners</a></span>
-                            <span class="my-2"><a href="#" class="text-white  text-md hover:text-blue-500">Media</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Overview</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">What we do</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Statement of Principles</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Inclusion</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Publications</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Partners</a></span>
+                            <span class="my-2"><a href="/#" class="text-white  text-md hover:text-blue-500">Media</a></span>
 
                         </div>
                     </div>
