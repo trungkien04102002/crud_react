@@ -1,15 +1,14 @@
 import './App.css';
-import PageHeader from './components/PageHeader/PageHeader';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import MatchDay from './components/MatchDay/MatchDay';
-import GameweekFilter from './components/Modal/GameweekFilter';
+import ClubFilter from './components/Modal/ClubFilter';
+import ClubsPage from './components/Page/ClubsPage/ClubsPage';
 import FixturesPage from './components/Page/FixuresPage/FixuresPage';
 import ResultsPage from './components/Page/ResultsPage/ResultsPage';
+import Team from './components/Team/Team';
+import TestCpm from './components/Test/Test';
 function App() {
   return (
  <>
-  <ResultsPage/>
+  <ClubsPage/>
  </>
   );
 }

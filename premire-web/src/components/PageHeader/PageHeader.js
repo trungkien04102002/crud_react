@@ -3,7 +3,7 @@ import React from 'react';
 const PageHeader = ({headerPage}) => {
   return (
     <div className="bg-primary-bg bg-cover">
-      <div className="max-w-7xl mx-auto py-12 px-5 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-[100px] mx-auto py-12 px-5 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold text-black sm:text-5xl sm:tracking-tight lg:text-6xl">
           Welcome to the {headerPage}
         </h1>
