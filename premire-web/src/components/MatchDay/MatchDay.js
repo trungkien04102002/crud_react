@@ -1,9 +1,9 @@
 import Match from "./Match";
 export default function MatchDay({ dataMatch, isResult }) {
   return (
-    <>
+    <div className="">
       {dataMatch?.map((data) => (
-        <>{data.matches && <div className=" my-[40px] m-auto max-w-[1400px] ">
+        <>{data.matches && <div className=" my-[40px]  ">
         {console.log('test',data.matches)}
         <div className="flex justify-between">
           <div className="text-[25px] font-bold text-[#37003c]">
@@ -26,6 +26,6 @@ export default function MatchDay({ dataMatch, isResult }) {
       </div>}</>
        
       ))}
-    </>
+    </div>
   );
 }

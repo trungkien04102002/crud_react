@@ -2,8 +2,8 @@ import React from 'react';
 
 const PageHeader = ({headerPage}) => {
   return (
-    <div className="bg-primary-bg bg-cover">
-      <div className="max-w-7xl mx-[100px] mx-auto py-12 px-5 sm:px-6 lg:px-8">
+    <div className="bg-primary-bg bg-cover bg-[url('https://www.premierleague.com/resources/rebrand/v7.124.0/i/elements/backgrounds/primary-bg.svg')]" >
+      <div className="max-w-7xl  py-12 sm:px-6 lg:px-8 px-[25px] xl:px-[200px]">
         <h1 className="text-4xl font-extrabold text-black sm:text-5xl sm:tracking-tight lg:text-6xl">
           Welcome to the {headerPage}
         </h1>

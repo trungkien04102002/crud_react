@@ -53,9 +53,13 @@ export default function ClubFilter({ isResult }) {
 
   return (
     <>
-      <div>
-        <FormControl sx={{ m: 1, minWidth: 160 }}>
-          <InputLabel id="demo-simple-select-autowidth-label">
+      <div className="px-[25px] xl:px-[200px] mt-4">
+        <FormControl sx={{ m: 1, minWidth: 160, margin: 0}}
+        >
+          <InputLabel id="demo-simple-select-autowidth-label"
+            className="p-0"
+          
+          >
             Filter by club
           </InputLabel>
           <Select
@@ -64,6 +68,7 @@ export default function ClubFilter({ isResult }) {
             value={club}
             onChange={handleChange}
             label="Filter by team"
+            className="p-0"
           >
             <MenuItem value="">
               <em>All clubs</em>
@@ -75,8 +80,8 @@ export default function ClubFilter({ isResult }) {
             ))}
           </Select>
         </FormControl>
-      </div>
       <MatchDay dataMatch={dataMatch} isResult={isResult} />
+      </div>
     </>
   );
 }
